@@ -1,5 +1,10 @@
 // Variables
-//
+
+$primario: "";
+$secundario: "";
+$texto: "";
+$fuente-base: "";
+
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
@@ -66,7 +71,7 @@ $colors: map-merge(
   $colors
 );
 
-$primary:       $blue !default;
+$primary:       $primario !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -80,7 +85,7 @@ $theme-colors: () !default;
 $theme-colors: map-merge(
   (
     "primary":    $primary,
-    "secondary":  $secondary,
+    "secondary":  $secundario,
     "success":    $success,
     "info":       $info,
     "warning":    $warning,
@@ -144,7 +149,12 @@ $spacers: map-merge(
     2: ($spacer * .5),
     3: $spacer,
     4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    5: ($spacer * 3),
+    6: ($spacer * 3.5),
+    7: ($spacer * 4),
+    8: ($spacer * 5),
+    9: ($spacer * 6.5),
+    10: ($spacer * 8)
   ),
   $spacers
 );
@@ -280,7 +290,7 @@ $embed-responsive-aspect-ratios: join(
 // stylelint-disable value-keyword-case
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:            $font-family-sans-serif !default;
+$font-family-base:            $fuente-base !default;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
@@ -313,11 +323,13 @@ $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
+$display5-size:               3rem !default;
 
 $display1-weight:             300 !default;
 $display2-weight:             300 !default;
 $display3-weight:             300 !default;
 $display4-weight:             300 !default;
+$display5-weight:             300 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
